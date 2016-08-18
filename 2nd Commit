@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <script src="https://s3.amazonaws.com/idme/developer/idme-buttons-2.0.1/assets/js/idme-modal.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $(".login-trigger").on("click", function() {
+      var top   = ($(document).height() - 780) / 4;
+      var left  = ($(document).width() - 750) / 2;
+    $.get("https://api.id.me/api/public/v2/attributes.json?access_token=22d7cad0022744e8ad7b917d9f8f6b77")
+    $.post({
+id: "2be9520607c7478fb654ac23af524e79",
+verified: true,
+affiliation: "Military Family",
+fname: null,
+lname: null,
+zip: null,
+uuid: "2be9520607c7478fb654ac23af524e79",
+email: "partner+joshua_tellington_test@id.me"
+})
+
+      window.open("https://api.id.me/oauth/authorize?&redirect_uri=https://verify.id.me/military/1a7d983a37e544deb66fd7eb2e914ce1&response_type=token&scope=military&display=popup", "", "scrollbars=yes,menubar=no,status=no,location=no,toolbar=no,width=750,height=780,top=" + top + ",left=" + left);
+    });
+  });
+</script>
+    
+
+        <title>API Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<script src="https://s3.amazonaws.com/idme/developer/idme-buttons-2.0.1/assets/js/idme-modal.min.js" type="text/javascript"></script>
+<div class="idme-btn-container"><span class="idme-btn-affinity"><br>[AFFINITY GROUP] receives [OFFER] off with ID.me<br></span>
+<a href="https://api.id.me/oauth/authorize?client_id=8e55370d96e00e78c1d0f426cdcdf81e&redirect_uri=https://verify.id.me/military/1a7d983a37e544deb66fd7eb2e914ce1&response_type=token&scope=military" class="idme-btn">
+  <img src="https://s3.amazonaws.com/idme/developer/idme-buttons-2.0.1/assets/img/btn-primary-Troop.png" border="0" alt="Verify with ID.me Troop ID" class="idme-btn-primary-lg-Troop">
+</a>
+<a href="https://api.id.me/oauth/authorize?client_id=8e55370d96e00e78c1d0f426cdcdf81e&redirect_uri=https://verify.id.me/military/1a7d983a37e544deb66fd7eb2e914ce1&response_type=token&scope=military" class="idme-btn">
+  <img src="https://s3.amazonaws.com/idme/developer/idme-buttons-2.0.1/assets/img/btn-primary-Responder.png" border="0" alt="Verify with ID.me Responder ID" class="idme-btn-primary-lg-Responder">
+</a>
+<a href="https://api.id.me/oauth/authorize?client_id=8e55370d96e00e78c1d0f426cdcdf81e&redirect_uri=https://verify.id.me/military/1a7d983a37e544deb66fd7eb2e914ce1&response_type=token&scope=responder" class="idme-btn">
+  <img src="https://s3.amazonaws.com/idme/developer/idme-buttons-2.0.1/assets/img/btn-primary-Student.png" border="0" alt="Verify with ID.me Student ID" class="idme-btn-primary-lg-Student">
+</a>
+<a href="https://api.id.me/oauth/authorize?client_id=8e55370d96e00e78c1d0f426cdcdf81e&redirect_uri=https://verify.id.me/military/1a7d983a37e544deb66fd7eb2e914ce1&response_type=token&scope=student" class="idme-btn">
+  <img src="https://s3.amazonaws.com/idme/developer/idme-buttons-2.0.1/assets/img/btn-primary-Teacher.png" border="0" alt="Verify with ID.me Teacher ID" class="idme-btn-primary-lg-Teacher">
+</a>
+<span class="idme-btn-verification"><img alt="Lock" src="https://s3.amazonaws.com/idme/assets/lock.png" class="idme-btn-lock" width="8"><br>Verification by ID.me<br> &bull; <a href="#" class="idme-modal-open">What is ID.me?</a></span></div>
+
+    </body>
+</html>
